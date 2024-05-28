@@ -1,4 +1,5 @@
 // app/layout.js or app/RootLayout.js (depending on your file structure)
+'use client';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
