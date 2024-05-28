@@ -1,6 +1,7 @@
 // components/Preloader.js
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const letterAnimation = {
   hidden: { opacity: 0, y: -50 },
@@ -81,10 +82,11 @@ const Preloader = ({ setLoading }) => {
           duration: 1,
         }}
       >
-        <img
+        <Image
           src="/mishkaproductions.png"
           alt="Mishka Productions Logo"
-          className="w-50 h-50"
+          width={200} // Adjust width as needed
+          height={200} // Adjust height as needed
         />
       </motion.div>
     </div>
