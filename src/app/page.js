@@ -4,11 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link, Element } from "react-scroll";
 import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
 import Episodes from "./components/Episodes";
-import AboutSection from "./components/1";
-import ProjectsSection from "./components/ProjectsSection";
-import Footer from "./components/Footer";
 import Previousepisodes from "./components/Previousepisodes";
 import Review from "./components/Review";
 

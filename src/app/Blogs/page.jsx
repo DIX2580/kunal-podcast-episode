@@ -1,5 +1,4 @@
 import React from "react";
-
 const ProjectCard = () => {
   return (
     <div className="text-white episode font-Poppins">

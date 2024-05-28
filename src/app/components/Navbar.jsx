@@ -8,19 +8,19 @@ import Image from "next/image";
 const navLinks = [
   {
     title: "Home",
-    path: "#Home",
+    path: "/",
   },
   {
     title: "Episodes",
-    path: "#Episodes",
+    path: "/Episodes",
   },
   {
     title: "Blogs",
-    path: "#Blogs",
+    path: "/Blogs",
   },
   {
     title: "Subscribe",
-    path: "#Subscribe",
+    path: "/Subscribe",
   },
 ];
 
