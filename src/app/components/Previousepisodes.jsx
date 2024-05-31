@@ -1,24 +1,28 @@
 "use client"
 
-
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Videos = () => {
   const initialVideos = [
-    { id: 1, src: "https://www.youtube.com/embed/AJCfETtP4MU?si=__wcJR3m0EBaXoin" },
-    { id: 2, src: "https://www.youtube.com/embed/i2xxhRTs5Uc?si=mNo1aHr0s2o6SMlX" },
-    { id: 3, src: "https://www.youtube.com/embed/rTzjYO3N3rQ?si=2YonFxCfv1jdnZsl" },
+    { id: 1, src: "https://www.youtube.com/embed/JhrcCr0LsGk?si=Udoqs4aaO8-5bqMY" },
+    { id: 2, src: "https://www.youtube.com/embed/zXC6-mkC9cI?si=3kfM_vFPcNcoQazg" },
+    { id: 3, src: "https://www.youtube.com/embed/UHoaIZmhK_o?si=G6sHavH3C4BSvSJw" },
   ];
 
   const moreVideos = [
-    { id: 4, src: "https://www.youtube.com/embed/Pv91eiIcAno?si=HlS5MGuQ4PQJYEdU" },
-    { id: 5, src: "https://www.youtube.com/embed/F6PqxbvOCUI?si=lgSyRVOmVtlePqCj" },
-    { id: 6, src: "https://www.youtube.com/embed/gnK_6sFRX8g?si=RFB-okNNwPlWnI3W" },
-    { id: 7, src: "https://www.youtube.com/embed/2d5-SzWQ-2k?si=-ACxy4pDdJ8eh-KV" },
-    { id: 8, src: "https://www.youtube.com/embed/AKVpL-thdEQ?si=qeeVFFFugIf6J3_5" },
-    { id: 9, src: "https://www.youtube.com/embed/9E9bscLGTAA?si=cOwt7mW0LjNDyo_l" },
-    
+    { id: 4, src: "https://www.youtube.com/embed/p67DOPfxm5c?si=uWkINeos-N8Taw-F" },
+    { id: 5, src: "https://www.youtube.com/embed/nvefYHPEZ-A?si=nhmUnDiO6IfD8C6u" },
+    { id: 6, src: "https://www.youtube.com/embed/-6aFLghjj34?si=tFzZsHDNCuF4RfFw" },
+    { id: 7, src: "https://www.youtube.com/embed/BOCoXy55cO4?si=7lhjEJufNB6IFPeM" },
+    { id: 8, src: "https://www.youtube.com/embed/t2XusdE-0v4?si=1qKZKFahTD8c6c_e" },
+    { id: 9, src: "https://www.youtube.com/embed/JhrcCr0LsGk?si=Udoqs4aaO8-5bqMY" },
+    { id: 10, src: "https://www.youtube.com/embed/p67DOPfxm5c?si=uWkINeos-N8Taw-F" },
+    { id: 11, src: "https://www.youtube.com/embed/nvefYHPEZ-A?si=nhmUnDiO6IfD8C6u" },
+    { id: 12, src: "https://www.youtube.com/embed/-6aFLghjj34?si=tFzZsHDNCuF4RfFw" },
+    { id: 13, src: "https://www.youtube.com/embed/BOCoXy55cO4?si=7lhjEJufNB6IFPeM" },
+    { id: 14, src: "https://www.youtube.com/embed/t2XusdE-0v4?si=1qKZKFahTD8c6c_e" },
+    { id: 15, src: "https://www.youtube.com/embed/JhrcCr0LsGk?si=Udoqs4aaO8-5bqMY" },
   ];
 
   const [videos, setVideos] = useState(initialVideos);
@@ -37,10 +41,15 @@ const Videos = () => {
     setVideoIndex(newVideoIndex);
   };
 
+  const closeAllVideos = () => {
+    setVideos(initialVideos);
+    setVideoIndex(0);
+  };
+
   return (
     <div className="text-center py-8">
-      <h4 className="text-lg font-Poppins font-bold text-amber-400 ">Listen To Our</h4>
-      <h1 className="text-white mb-4 text-4xl font-Poppins font-bold ">Previous Episodes</h1>
+      <h4 className="text-lg font-Poppins font-bold text-amber-400">Listen To Our</h4>
+      <h1 className="text-white mb-4 text-4xl font-Poppins font-bold">Previous Episodes</h1>
       <div className="flex flex-wrap justify-center gap-4">
         <AnimatePresence>
           {videos.map((video, index) => (
@@ -68,7 +77,7 @@ const Videos = () => {
       <div className="flex justify-center mt-8 gap-4">
         {videoIndex < moreVideos.length && (
           <button
-            className=" py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8  text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
+            className="py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
             onClick={loadMoreVideos}
           >
             Load More
@@ -76,10 +85,18 @@ const Videos = () => {
         )}
         {videoIndex > 0 && (
           <button
-            className="py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8  text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
+            className="py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
             onClick={showLessVideos}
           >
             Show Less
+          </button>
+        )}
+        {videoIndex > 0 && (
+          <button
+            className="py-2 text-black font-Poppins font-bold mt-10 bg-red-400 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-red-900 hover:underline"
+            onClick={closeAllVideos}
+          >
+            Close All
           </button>
         )}
       </div>
