@@ -42,14 +42,8 @@ export default function RootLayout({ children }) {
           <Preloader setLoading={setLoading} />
         ) : (
           <>
-            <motion.div
-              ref={ref}
-              initial="hidden"
-              animate={controls}
-              variants={navVariants}
-            >
+       
               <Navbar />
-            </motion.div>
             <main>{children}</main>
             <Footer />
           </>
