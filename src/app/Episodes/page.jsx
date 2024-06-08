@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
+import AudioPlayerList from '../components/AudioPlayerList';
 
-const ProjectCard = () => {
+const App = () => {
   return (
-    <div className="text-white episode font-Poppins">
-        <h1>This will be Episodes </h1>
-      
+    <div className="App">
+      <AudioPlayerList />
     </div>
   );
 };
 
-export default ProjectCard;
+export default App;

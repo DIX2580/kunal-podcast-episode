@@ -76,28 +76,28 @@ const Videos = () => {
       </div>
       <div className="flex justify-center mt-8 gap-4">
         {videoIndex < moreVideos.length && (
-          <button
-            className="py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
-            onClick={loadMoreVideos}
-          >
-            Load More
-          </button>
-        )}
-        {videoIndex > 0 && (
-          <button
-            className="py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
-            onClick={showLessVideos}
-          >
-            Show Less
-          </button>
-        )}
-        {videoIndex > 0 && (
-          <button
-            className="py-2 text-black font-Poppins font-bold mt-10 bg-red-400 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-red-900 hover:underline"
-            onClick={closeAllVideos}
-          >
-            Close All
-          </button>
+            <button
+              className="py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
+              onClick={loadMoreVideos}
+            >
+              Load More
+            </button>
+          )}
+          {videoIndex > 0 && (
+            <button
+              className="py-2 text-black font-Poppins font-bold mt-10 bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-yellow-900 hover:underline"
+              onClick={showLessVideos}
+            >
+              Show Less
+            </button>
+          )}
+          {videoIndex > 0 && (
+            <button
+              className="py-2 text-black font-Poppins font-bold mt-10 bg-red-400 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full text-sm px-8 text-center me-2 mb-2 dark:focus:ring-red-900 hover:underline"
+              onClick={closeAllVideos}
+            >
+              Close All
+            </button>
         )}
       </div>
     </div>
